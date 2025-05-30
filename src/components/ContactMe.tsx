@@ -124,8 +124,8 @@ const ContactMe = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-semibold">Location</h3>
-                <p className="text-gray-400">Btm 2nd stage, Bangaluru, India</p>
+                <h3 className="text-xl font-semibold">Current Location</h3>
+                <p className="text-gray-400">Patna, Bihar, India</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -136,7 +136,7 @@ const ContactMe = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold">Phone</h3>
-                <p className="text-gray-400">+91-8310948499</p>
+                <p className="text-gray-400">+91-9942629308</p>
               </div>
             </div>
           </div>

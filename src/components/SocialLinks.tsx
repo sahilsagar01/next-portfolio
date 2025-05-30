@@ -6,7 +6,7 @@ const SocialLinks = () => {
   const socialLinks = [
     {
       name: "GitHub",
-      url: "https://github.com",
+      url: "https://github.com/sahilsagar01",
       icon: (
         <svg
           className="w-6 h-6"
@@ -20,7 +20,7 @@ const SocialLinks = () => {
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/sahil-sagar-7aa429262/",
       icon: (
         <svg
           className="w-6 h-6"
@@ -34,7 +34,7 @@ const SocialLinks = () => {
     },
     {
       name: "Twitter",
-      url: "https://twitter.com",
+      url: "https://x.com/sagar_sahi83747",
       icon: (
         <svg
           className="w-6 h-6"
@@ -48,7 +48,7 @@ const SocialLinks = () => {
     },
     {
       name: "Instagram",
-      url: "https://instagram.com",
+      url: "https://www.instagram.com/_iamsahilsagar/",
       icon: (
         <svg
           className="w-6 h-6"

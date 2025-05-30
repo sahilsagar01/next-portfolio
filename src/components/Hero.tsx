@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import SocialLinks from './SocialLinks';
+import Link from 'next/link';
 
 const Hero = () => {
   const containerVariants = {
@@ -79,13 +80,15 @@ const Hero = () => {
             >
               View Projects
             </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border border-blue-500 text-blue-500 px-6 py-3 rounded-lg font-medium"
-            >
-              Contact Me
-            </motion.button>
+            <Link href="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-500 text-blue-500 px-6 py-3 rounded-lg font-medium"
+              >
+                Contact Me
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
 
