@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { socialLinks } from "./socialLinks";
 import { experience, totalExperience, tools, tech } from "./data";
@@ -18,7 +20,7 @@ export default function Home() {
               aria-label={link.label}
               className="text-white hover:text-blue-400 transition text-2xl shadow-lg"
             >
-              <Icon />
+              {Icon ? <Icon /> : null}
             </a>
           );
         })}
