@@ -46,7 +46,9 @@ const Navbar = () => {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              {["About", "Projects", "Skills", "Contact"].map((item) => (
+              {[
+                // "About",
+               "Projects", "Skills", "Contact"].map((item) => (
                 <motion.div
                   key={item}
                   variants={linkVariants}
@@ -115,7 +117,9 @@ const Navbar = () => {
           transition={{ duration: 0.3 }}
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {["About", "Projects", "Skills", "Contact"].map((item) => (
+            {[
+                // "About",
+             "Projects", "Skills", "Contact"].map((item) => (
               <motion.div
                 key={item}
                 whileHover={{ scale: 1.05 }}
