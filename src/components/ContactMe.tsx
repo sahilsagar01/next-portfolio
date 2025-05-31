@@ -7,7 +7,7 @@ import emailjs from '@emailjs/browser';
 const ContactMe = () => {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-  const formRef = useRef('');
+const formRef = useRef<HTMLFormElement>(null);
   const [formInput, setFormInput] = useState({
     name: '',
     email: '',
@@ -39,17 +39,19 @@ const ContactMe = () => {
 
   const sendEmail = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
+    if (!formRef.current) return; // ✅ safeguard against null
+
     emailjs
-      .sendForm('service_dmbhh5r', 'template_ws5iv1c', formRef.current, {
-        publicKey: 'WdhUke1JK1F8dHKY4',
+      .sendForm("service_dmbhh5r", "template_ws5iv1c", formRef.current, {
+        publicKey: "WdhUke1JK1F8dHKY4",
       })
       .then(
         () => {
           setSuccess(true);
           setFormInput({
-            name: '',
-            email: '',
-            message: '',
+            name: "",
+            email: "",
+            message: "",
           });
           setTimeout(() => setSuccess(false), 3000);
         },
