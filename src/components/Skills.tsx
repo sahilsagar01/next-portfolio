@@ -185,7 +185,7 @@ const Skills = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
-              key={category.name}
+              key={category.name + categoryIndex}
               variants={itemVariants}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 relative overflow-hidden"
             >
@@ -197,7 +197,7 @@ const Skills = () => {
               <div className="space-y-6">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
-                    key={skill.name}
+                    key={skill.name + skillIndex}
                     variants={itemVariants}
                     className="flex items-center justify-between"
                   >
@@ -213,14 +213,19 @@ const Skills = () => {
                             transition={{
                               delay: i * 0.1,
                               duration: 0.5,
-                              ease: 'easeOut',
+                              ease: "easeOut",
                             }}
                           >
                             <motion.div
                               className="h-full rounded-full bg-blue-500"
                               initial={{ scaleX: 0 }}
-                              animate={{ scaleX: i < (skill.level / 100) * 5 ? 1 : 0 }}
-                              transition={{ delay: 0.5 + i * 0.1, duration: 0.5 }}
+                              animate={{
+                                scaleX: i < (skill.level / 100) * 5 ? 1 : 0,
+                              }}
+                              transition={{
+                                delay: 0.5 + i * 0.1,
+                                duration: 0.5,
+                              }}
                             />
                           </motion.div>
                         ))}

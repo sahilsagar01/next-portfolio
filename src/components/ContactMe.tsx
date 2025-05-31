@@ -54,7 +54,7 @@ const ContactMe = () => {
           });
           setTimeout(() => setSuccess(false), 3000);
         },
-        (error) => {
+        () => {
           setError(true);
           setTimeout(() => setError(false), 3000);
         }
