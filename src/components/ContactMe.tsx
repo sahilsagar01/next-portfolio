@@ -69,7 +69,6 @@ const formRef = useRef<HTMLFormElement>(null);
       animate="visible"
       variants={containerVariants}
     >
-
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <motion.div className="space-y-8" variants={itemVariants}>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
@@ -94,7 +93,12 @@ const formRef = useRef<HTMLFormElement>(null);
               </div>
               <div>
                 <h3 className="text-xl font-semibold">Email</h3>
-                <p className="text-gray-400">sagarsahil520@gmail.com</p>
+                <a
+                  href="mailto:sagarsahil520@gmail.com"
+                  className="text-gray-400"
+                >
+                  <p className="text-gray-400">sagarsahil520@gmail.com</p>
+                </a>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -121,7 +125,7 @@ const formRef = useRef<HTMLFormElement>(null);
               </div>
               <div>
                 <h3 className="text-xl font-semibold">Current Location</h3>
-                <p className="text-gray-400">Patna, Bihar, India</p>
+                <p className="text-gray-400"> Karnataka, Bangalore, India</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -142,7 +146,11 @@ const formRef = useRef<HTMLFormElement>(null);
               </div>
               <div>
                 <h3 className="text-xl font-semibold">Phone</h3>
-                <p className="text-gray-400">+91-9942629308</p>
+                  <a href="tel:+919942629308" className="text-gray-400">
+                <p className="text-gray-400">
+                    +91-9942629308
+                </p>
+                  </a>
               </div>
             </div>
           </div>

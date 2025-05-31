@@ -71,20 +71,24 @@ const Hero = () => {
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex gap-4">
-            <Link target="_blank" href="https://magicsell.ai/">
+            <Link
+              target="_blank"
+              href="https://magicsell.ai/"
+              className=" cursor-pointer"
+            >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-blue-500 text-white px-6 py-3 rounded-lg font-medium"
+                className="bg-blue-500 text-white px-6 py-3 rounded-lg font-medium  cursor-pointer"
               >
-                View Shopify App
+                View Current Project
               </motion.button>
             </Link>
-            <Link href="/contact">
+            <Link href="/contact" className=" cursor-pointer">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-blue-500 text-blue-500 px-6 py-3 rounded-lg font-medium"
+                className="border border-blue-500 text-blue-500 px-6 py-3 rounded-lg font-medium  cursor-pointer"
               >
                 Contact Me
               </motion.button>
@@ -128,7 +132,7 @@ const Hero = () => {
             </h2>
           </motion.div>
           <motion.div
-            className="absolute top-20 left-30 w-24 h-24"
+            className="absolute top-20 right-20 w-24 h-24"
             animate={{
               x: [0, -10, 0], // Move up 10px then back down
             }}
@@ -143,7 +147,7 @@ const Hero = () => {
             </h2>
           </motion.div>
           <motion.div
-            className="absolute top-1/3 -left-2 w-24 h-24"
+            className="absolute top-1/4 -left-2 w-24 h-24"
             animate={{
               x: [0, -10, 0], // Move up 10px then back down
             }}
@@ -159,7 +163,7 @@ const Hero = () => {
             </h2>
           </motion.div>
           <motion.div
-            className="absolute top-40 right-30 w-24 h-24"
+            className="absolute bottom-1/7 right-30 w-24 h-24"
             animate={{
               x: [0, -10, 0], // Move up 10px then back down
             }}
@@ -175,7 +179,7 @@ const Hero = () => {
           </motion.div>
 
           <motion.div
-            className="absolute bottom-1/4 -right-4"
+            className="absolute bottom-1/6 -right-4"
             animate={{
               x: [0, -10, 0], // Move up 10px then back down
             }}

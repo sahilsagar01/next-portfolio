@@ -28,14 +28,14 @@ const experiences = [
       "Developed a company presentation website highlighting features, pricing, and blogs.",
     ],
   },
-  {
-    title: "Vyral24",
-    role: "Full Stack Developer (In Progress)",
-    work: [
-      "Actively pursuing this opportunity with high interest in joining the Vyral24 team.",
-    ],
-    inProgress: true,
-  },
+  // {
+  //   title: "Vyral24",
+  //   role: "Full Stack Developer (In Progress)",
+  //   work: [
+  //     "Actively pursuing this opportunity with high interest in joining the Vyral24 team.",
+  //   ],
+  //   inProgress: true,
+  // },
 ];
  const itemVariants = {
    hidden: { y: 20, opacity: 0 },
@@ -104,7 +104,7 @@ const JobExperience = () => {
               className="absolute top-1/2 left-0 h-1 z-10 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
               style={{
                 width: `${
-                  (experiences.length - 1) * (100 / experiences.length)
+                  (experiences.length) * (100 / experiences.length)
                 }%`,
               }}
             />
@@ -142,7 +142,7 @@ const JobExperience = () => {
             </div>
             <div
               className="absolute left-1/2 top-0 z-10 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transform -translate-x-1/2"
-              style={{ height: `${experiences.length * 140}px` }}
+              style={{ height: `${(experiences.length + 1) * 140}px` }}
             />
           </div>
         </div>
