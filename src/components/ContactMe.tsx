@@ -3,8 +3,6 @@
 import { motion } from 'framer-motion';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import Link from 'next/link';
-import Back from './Back';
 
 const ContactMe = () => {
   const [error, setError] = useState(false);
@@ -69,7 +67,6 @@ const ContactMe = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <Back />
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <motion.div className="space-y-8" variants={itemVariants}>

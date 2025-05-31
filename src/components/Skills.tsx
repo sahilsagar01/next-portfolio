@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Back from "./Back";
 
 const Skills = () => {
   const skillCategories = [
@@ -180,7 +179,6 @@ const Skills = () => {
       variants={containerVariants}
       id="skills"
     >
-      <Back />
       <div className="max-w-7xl mx-auto w-full">
         <motion.h2
           variants={itemVariants}

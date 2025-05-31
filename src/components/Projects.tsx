@@ -3,7 +3,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
-import Back from './Back';
 
 interface Project {
   title: string;
@@ -106,7 +105,6 @@ const Projects = () => {
       variants={containerVariants}
       id="projects"
     >
-      <Back />
 
       <div className="max-w-7xl mx-auto w-full">
         <motion.h2

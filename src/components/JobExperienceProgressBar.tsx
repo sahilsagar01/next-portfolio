@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
-import Link from "next/link";
 
 const experiences = [
   {
@@ -21,7 +20,7 @@ const experiences = [
     ],
   },
   {
-    title: "Magicsell App",
+    title: "Magicsell",
     role: "Associate Full Stack Developer",
     work: [
       "Built a Shopify theme extension from scratch using Remix.",
@@ -38,38 +37,31 @@ const experiences = [
     inProgress: true,
   },
 ];
+ const itemVariants = {
+   hidden: { y: 20, opacity: 0 },
+   visible: {
+     y: 0,
+     opacity: 1,
+     transition: {
+       duration: 0.5,
+       ease: "easeOut",
+     },
+   },
+ };
+
+ 
 
 const JobExperience = () => {
   return (
     <div className="py-16 px-5 bg-black text-white min-h-screen flex flex-col gap-10">
-      <Link href="/">
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="flex items-center space-x-2 backdrop-blur-sm px-4 py-2 rounded-lg text-white transition-colors"
-        >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 19l-7-7m0 0l7-7m-7 7h18"
-            />
-          </svg>
-          <span>Back</span>
-        </motion.button>
-      </Link>
-      <div className=" flex flex-col md:gap-[250px]">
+      <div className=" lg:pt-2 flex flex-col md:gap-[250px]">
         {" "}
-        <h2 className="text-3xl sm:text-2xl font-bold text-center mb-10">
-          My Job Experience
-        </h2>
+        <motion.h2
+          variants={itemVariants}
+          className="text-4xl sm:text-5xl font-bold text-center mb-16"
+        >
+          My <span className="text-blue-500">Job Experience</span>
+        </motion.h2>
         <div className="relative w-full max-w-7xl mx-auto">
           {/* Desktop Horizontal Timeline */}
           <div className="hidden sm:block">
