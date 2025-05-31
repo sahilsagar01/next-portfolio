@@ -82,9 +82,8 @@ const JobExperience = () => {
                   }`}
                 >
                   <motion.div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center mb-2 z-10 ${
-                      exp.inProgress ? "bg-gray-600" : "bg-blue-600"
-                    }`}
+                    className={`w-10 h-10 rounded-full flex items-center justify-center mb-2 z-10  bg-blue-600
+                    `}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -120,9 +119,8 @@ const JobExperience = () => {
                   className="relative w-full flex flex-col items-center"
                 >
                   <motion.div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center mb-2 z-20 ${
-                      exp.inProgress ? "bg-gray-600" : "bg-blue-600"
-                    }`}
+                    className={`w-10 h-10 rounded-full flex items-center justify-center mb-2 z-20 bg-blue-600
+                    `}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                   >
