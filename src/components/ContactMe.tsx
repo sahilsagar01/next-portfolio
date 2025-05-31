@@ -102,7 +102,7 @@ const ContactMe = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <motion.div className="space-y-8" variants={itemVariants}>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Let's Work <span className="text-blue-500">Together</span>
+            Let&apos;s Work <span className="text-blue-500">Together</span>
           </h2>
           <div className="space-y-6">
             <div className="flex items-center space-x-4">

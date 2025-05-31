@@ -52,7 +52,7 @@ const Hero = () => {
         <div className="space-y-8">
           <motion.div variants={itemVariants}>
             <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
-              Hi, I'm <span className="text-blue-500">Sahil Kumar</span>
+              Hi, I&apos;m <span className="text-blue-500">Sahil Kumar</span>
             </h2>
           </motion.div>
 
