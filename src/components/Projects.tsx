@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
+import Back from './Back';
 
 interface Project {
   title: string;
@@ -99,42 +100,13 @@ const Projects = () => {
 
   return (
     <motion.section
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 relative"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8 relative"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
       id="projects"
     >
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
-        className="absolute top-8 left-8"
-      >
-        <Link href="/">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center space-x-2 backdrop-blur-sm px-4 py-2 rounded-lg text-white transition-colors"
-          >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M10 19l-7-7m0 0l7-7m-7 7h18"
-              />
-            </svg>
-            <span>Back</span>
-          </motion.button>
-        </Link>
-      </motion.div>
+      <Back />
 
       <div className="max-w-7xl mx-auto w-full">
         <motion.h2

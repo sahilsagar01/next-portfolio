@@ -77,7 +77,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-medium"
               >
-               View Shopify App
+                View Shopify App
               </motion.button>
             </Link>
             <Link href="/contact">
@@ -113,10 +113,14 @@ const Hero = () => {
           </motion.div>
 
           <motion.div
-            className="absolute bottom-10 left-30 w-24 h-24"
+            className="absolute bottom-20 left-30 w-24 h-24"
             animate={{
-              rotate: 360,
-              transition: { duration: 20, repeat: Infinity, ease: "linear" },
+              x: [0, -10, 0], // Move up 10px then back down
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
             }}
           >
             <h2 className="flex items-center gap-2 text-3xl font-light text-black dark:text-white text-shadow-2xs text-shadow-black">
@@ -124,10 +128,14 @@ const Hero = () => {
             </h2>
           </motion.div>
           <motion.div
-            className="absolute top-10 left-30 w-24 h-24"
+            className="absolute top-20 left-30 w-24 h-24"
             animate={{
-              rotate: 360,
-              transition: { duration: 10, repeat: Infinity, ease: "linear" },
+              x: [0, -10, 0], // Move up 10px then back down
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
             }}
           >
             <h2 className="flex items-center gap-2 text-3xl font-medium text-black dark:text-white">
@@ -135,22 +143,30 @@ const Hero = () => {
             </h2>
           </motion.div>
           <motion.div
-            className="absolute top-1/4 -left-4 w-24 h-24"
+            className="absolute top-1/3 -left-2 w-24 h-24"
             animate={{
-              rotate: 360,
-              transition: { duration: 20, repeat: Infinity, ease: "linear" },
+              x: [0, -10, 0], // Move up 10px then back down
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
             }}
           >
             <h2 className="flex items-center gap-2 text-3xl font-bold text-[#95BF47]">
               <SiShopify className="text-4xl" />
-              Shopify
+              ShopifyCLI
             </h2>
           </motion.div>
           <motion.div
             className="absolute top-40 right-30 w-24 h-24"
             animate={{
-              rotate: 360,
-              transition: { duration: 20, repeat: Infinity, ease: "linear" },
+              x: [0, -10, 0], // Move up 10px then back down
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
             }}
           >
             <h2 className="flex items-center gap-2 text-3xl font-bold text-[#000] text-shadow-2xs text-shadow-blue-50">
@@ -161,8 +177,12 @@ const Hero = () => {
           <motion.div
             className="absolute bottom-1/4 -right-4"
             animate={{
-              rotate: -360,
-              transition: { duration: 15, repeat: Infinity, ease: "linear" },
+              x: [0, -10, 0], // Move up 10px then back down
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
             }}
           >
             <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 drop-shadow-[0_0_10px_rgba(99,102,241,0.8)] tracking-wide uppercase">

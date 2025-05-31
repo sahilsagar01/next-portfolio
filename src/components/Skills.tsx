@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Back from "./Back";
 
 const Skills = () => {
   const skillCategories = [
@@ -32,13 +33,46 @@ const Skills = () => {
     },
   ];
 
+  const sections = [
+    {
+      title: "Tools",
+      tools: [
+        "Git",
+        "AWS (EC2/S3)",
+        "Jira",
+        // 'Azure',
+        "Auth0",
+        "Postman",
+      ],
+    },
+    {
+      title: "UI Library",
+      tools: [
+        "Shopify Polaris",
+        "TailwindCSS",
+        "MUI",
+        "Ant Design",
+        "React Bootstrap",
+        // 'Azure',
+      ],
+    },
+  ];
+
   const tools = [
-    'Git',
-    'AWS (EC2/S3)',
-    'Jira',
+    "Git",
+    "AWS (EC2/S3)",
+    "Jira",
     // 'Azure',
-    'Auth0',
-    'Postman'
+    "Auth0",
+    "Postman",
+  ];
+  const UILibrary = [
+    "Shopify Polaris",
+    "TailwindCSS",
+    "MUI",
+    "Ant Design",
+    "React Bootstrap",
+    // 'Azure',
   ];
 
   const containerVariants = {
@@ -59,7 +93,7 @@ const Skills = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: 'easeOut',
+        ease: "easeOut",
       },
     },
   };
@@ -71,7 +105,7 @@ const Skills = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: 'easeOut',
+        ease: "easeOut",
       },
     },
   };
@@ -103,11 +137,13 @@ const Skills = () => {
             cx="40"
             cy="40"
             animate={{ strokeDashoffset }}
-            transition={{ duration: 1, ease: 'easeInOut' }}
+            transition={{ duration: 1, ease: "easeInOut" }}
           />
         </svg>
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-sm font-semibold text-white">{percentage}%</span>
+          <span className="text-sm font-semibold text-white">
+            {percentage}%
+          </span>
         </div>
       </div>
     );
@@ -118,17 +154,17 @@ const Skills = () => {
       className="absolute left-0 w-full h-0.5 bg-blue-500/20"
       initial={{ scaleX: 0 }}
       animate={{ scaleX: 1 }}
-      transition={{ duration: 1.5, ease: 'easeInOut' }}
+      transition={{ duration: 1.5, ease: "easeInOut" }}
     >
       <motion.div
         className="absolute left-0 w-full h-full bg-blue-500"
         animate={{
-          x: ['0%', '100%'],
+          x: ["0%", "100%"],
           opacity: [0, 1, 0],
         }}
         transition={{
           duration: 2,
-          ease: 'easeInOut',
+          ease: "easeInOut",
           repeat: Infinity,
           repeatDelay: 0.5,
         }}
@@ -144,36 +180,7 @@ const Skills = () => {
       variants={containerVariants}
       id="skills"
     >
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
-        className="absolute top-8 left-8"
-      >
-        <Link href="/">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center space-x-2  backdrop-blur-sm px-4 py-2 rounded-lg text-white transition-colors"
-          >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M10 19l-7-7m0 0l7-7m-7 7h18"
-              />
-            </svg>
-            <span>Back</span>
-          </motion.button>
-        </Link>
-      </motion.div>
+      <Back />
       <div className="max-w-7xl mx-auto w-full">
         <motion.h2
           variants={itemVariants}
@@ -239,26 +246,33 @@ const Skills = () => {
           ))}
         </div>
 
-        <motion.div
-          variants={itemVariants}
-          className="mt-16 bg-white/5 backdrop-blur-sm rounded-2xl p-8 relative overflow-hidden"
-        >
-          <RunningLine />
-          <h3 className="text-2xl font-semibold mb-6 text-blue-500">Tools</h3>
-          <div className="flex flex-wrap gap-4">
-            {tools.map((tool) => (
-              <motion.div
-                key={tool}
-                variants={chipVariants}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full text-white border border-blue-500/20 hover:border-blue-500/50 transition-colors"
-              >
-                {tool}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+        {sections.map((section, index) => {
+          return (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="mt-16 bg-white/5 backdrop-blur-sm rounded-2xl p-8 relative overflow-hidden"
+            >
+              <RunningLine />
+              <h3 className="text-2xl font-semibold my-6  text-blue-500">
+                {section.title}
+              </h3>
+              <div className="flex flex-wrap gap-4">
+                {section.tools.map((tool) => (
+                  <motion.div
+                    key={tool}
+                    variants={chipVariants}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full text-white border border-blue-500/20 hover:border-blue-500/50 transition-colors"
+                  >
+                    {tool}
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
     </motion.section>
   );
