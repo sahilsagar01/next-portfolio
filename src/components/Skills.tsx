@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 const Skills = () => {
   const skillCategories = [
@@ -57,22 +56,7 @@ const Skills = () => {
     },
   ];
 
-  const tools = [
-    "Git",
-    "AWS (EC2/S3)",
-    "Jira",
-    // 'Azure',
-    "Auth0",
-    "Postman",
-  ];
-  const UILibrary = [
-    "Shopify Polaris",
-    "TailwindCSS",
-    "MUI",
-    "Ant Design",
-    "React Bootstrap",
-    // 'Azure',
-  ];
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
