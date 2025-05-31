@@ -138,7 +138,7 @@ const Skills = () => {
 
   return (
     <motion.section
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 relative"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-gray-900 text-white py-18 px-4 sm:px-6 lg:px-8 relative"
       initial="hidden"
       animate="visible"
       variants={containerVariants}

@@ -17,24 +17,52 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
-  const projects: Project[] = [
-    {
-      title: 'HACKER NEWS',
-      period: '2023 - 2024',
-      description: 'A clone of the original Hacker News by Y-combinator built on react. Mui and Bootstrap are used to make the UI/UX clean and visually appealing. This app uses the original live API provided by the hacker news community to render the live information on UI.',
-      technologies: ['React', 'Material-UI', 'Bootstrap', 'Hacker News API'],
-      gitUrl: 'https://github.com/sahilsagar01/react-hacker-news-clone',
-      liveUrl: 'https://hacker-news-by8f.onrender.com'
-    },
-    {
-      title: 'DAILY NEWS',
-      period: '2023 - 2024',
-      description: 'Daily news is built on MERN stack technology with authentication. Users have to sign in or sign up first to enter the application. This application has several categories like business, sports, politics, health, and technology that help the user to see only those news in which the user is interested.',
-      technologies: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Tailwind CSS', 'Bootstrap'],
-      gitUrl: 'https://github.com/sahilsagar01/dailyhunt',
-      liveUrl: 'https://news-app-client.onrender.com'
-    }
-  ];
+ const projects: Project[] = [
+   {
+     title: "HACKER NEWS",
+     period: "2023 - 2024",
+     description:
+       "A clone of the original Hacker News by Y-combinator built on react. Mui and Bootstrap are used to make the UI/UX clean and visually appealing. This app uses the original live API provided by the hacker news community to render the live information on UI.",
+     technologies: ["React", "Material-UI", "Bootstrap", "Hacker News API"],
+     gitUrl: "https://github.com/sahilsagar01/react-hacker-news-clone",
+     liveUrl: "https://hacker-news-by8f.onrender.com",
+   },
+   {
+     title: "DAILY NEWS",
+     period: "2023 - 2024",
+     description:
+       "Daily news is built on MERN stack technology with authentication. Users have to sign in or sign up first to enter the application. This application has several categories like business, sports, politics, health, and technology that help the user to see only those news in which the user is interested.",
+     technologies: [
+       "MongoDB",
+       "Express.js",
+       "React",
+       "Node.js",
+       "Tailwind CSS",
+       "Bootstrap",
+     ],
+     gitUrl: "https://github.com/sahilsagar01/dailyhunt",
+     liveUrl: "https://news-app-client.onrender.com",
+   },
+   {
+     title: "Task Master (MERN)",
+     period: "May 2022 - Present",
+     description:
+       "A basic MERN Task management app that allows users to do CRUD operations on tasks. Inside this app, we can create new tasks with title and content. Every task has a status button to change status from pending to complete.",
+     technologies: ["MongoDB", "Express.js", "React", "Node.js"],
+     gitUrl: "https://github.com/sahilsagar01/task-master-mern", // Add GitHub repo if available
+     liveUrl: "https://mern-task-master-client.onrender.com",
+   },
+   {
+     title: "Weather App (React App)",
+     period: "May 2022 - Present",
+     description:
+       "A simple weather forecast application, this app provides you temperature, weather, wind speed, and humidity. You can also see the weather inside the weather card and save and delete the card if you want.",
+     technologies: ["React", "OpenWeatherMap API"],
+     gitUrl: "https://github.com/sahilsagar01/react-weather-app", // Add GitHub repo if available
+     liveUrl: "https://react-weather-client.onrender.com",
+   },
+ ];
+
 
   const containerVariants = {
     hidden: { opacity: 0 },

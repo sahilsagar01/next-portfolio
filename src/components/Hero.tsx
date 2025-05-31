@@ -1,9 +1,10 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import SocialLinks from './SocialLinks';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import SocialLinks from "./SocialLinks";
+import Link from "next/link";
+import { SiShopify } from "react-icons/si";
 
 const Hero = () => {
   const containerVariants = {
@@ -12,9 +13,9 @@ const Hero = () => {
       opacity: 1,
       transition: {
         delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -24,9 +25,9 @@ const Hero = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: 'easeOut'
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const floatingVariants = {
@@ -35,9 +36,9 @@ const Hero = () => {
       transition: {
         duration: 3,
         repeat: Infinity,
-        ease: 'easeInOut'
-      }
-    }
+        ease: "easeInOut",
+      },
+    },
   };
 
   return (
@@ -51,10 +52,10 @@ const Hero = () => {
         <div className="space-y-8">
           <motion.div variants={itemVariants}>
             <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
-              Hi, I'm <span className="text-blue-500">Your Name</span>
+              Hi, I'm <span className="text-blue-500">Sahil Kumar</span>
             </h2>
           </motion.div>
-          
+
           <motion.div variants={itemVariants}>
             <h1 className="text-2xl sm:text-3xl font-semibold text-gray-300">
               Full Stack Developer
@@ -65,21 +66,20 @@ const Hero = () => {
             variants={itemVariants}
             className="text-lg text-gray-400 max-w-2xl"
           >
-            I create beautiful and functional web applications with a focus on user
-            experience and modern technologies.
+            I create beautiful and functional web applications with a focus on
+            user experience and modern technologies.
           </motion.p>
 
-          <motion.div
-            variants={itemVariants}
-            className="flex gap-4"
-          >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-blue-500 text-white px-6 py-3 rounded-lg font-medium"
-            >
-              View Projects
-            </motion.button>
+          <motion.div variants={itemVariants} className="flex gap-4">
+            <Link target="_blank" href="https://magicsell.ai/">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-blue-500 text-white px-6 py-3 rounded-lg font-medium"
+              >
+               View Shopify App
+              </motion.button>
+            </Link>
             <Link href="/contact">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -93,7 +93,7 @@ const Hero = () => {
         </div>
 
         <motion.div
-          className="relative w-full h-[400px] lg:h-[600px]"
+          className="relative w-full h-[300px] lg:h-[600px]"
           variants={itemVariants}
         >
           <motion.div
@@ -101,9 +101,9 @@ const Hero = () => {
             animate="animate"
             variants={floatingVariants}
           >
-            <div className="relative w-full max-w-lg aspect-square">
+            <div className="relative w-full max-w-sm rounded-full overflow-hidden aspect-square">
               <Image
-                src="/globe.svg"
+                src="/assets/images/codeboy.JPEG"
                 alt="Developer Illustration"
                 fill
                 className="object-contain"
@@ -113,33 +113,61 @@ const Hero = () => {
           </motion.div>
 
           <motion.div
+            className="absolute bottom-10 left-30 w-24 h-24"
+            animate={{
+              rotate: 360,
+              transition: { duration: 20, repeat: Infinity, ease: "linear" },
+            }}
+          >
+            <h2 className="flex items-center gap-2 text-3xl font-light text-black dark:text-white text-shadow-2xs text-shadow-black">
+              Next.js
+            </h2>
+          </motion.div>
+          <motion.div
+            className="absolute top-10 left-30 w-24 h-24"
+            animate={{
+              rotate: 360,
+              transition: { duration: 10, repeat: Infinity, ease: "linear" },
+            }}
+          >
+            <h2 className="flex items-center gap-2 text-3xl font-medium text-black dark:text-white">
+              Mongo <span className=" text-green-500">db</span>
+            </h2>
+          </motion.div>
+          <motion.div
             className="absolute top-1/4 -left-4 w-24 h-24"
             animate={{
               rotate: 360,
-              transition: { duration: 20, repeat: Infinity, ease: 'linear' }
+              transition: { duration: 20, repeat: Infinity, ease: "linear" },
             }}
           >
-            <Image
-              src="/file.svg"
-              alt="File Icon"
-              fill
-              className="object-contain opacity-50"
-            />
+            <h2 className="flex items-center gap-2 text-3xl font-bold text-[#95BF47]">
+              <SiShopify className="text-4xl" />
+              Shopify
+            </h2>
+          </motion.div>
+          <motion.div
+            className="absolute top-40 right-30 w-24 h-24"
+            animate={{
+              rotate: 360,
+              transition: { duration: 20, repeat: Infinity, ease: "linear" },
+            }}
+          >
+            <h2 className="flex items-center gap-2 text-3xl font-bold text-[#000] text-shadow-2xs text-shadow-blue-50">
+              ExpressJs
+            </h2>
           </motion.div>
 
           <motion.div
-            className="absolute bottom-1/4 -right-4 w-16 h-16"
+            className="absolute bottom-1/4 -right-4"
             animate={{
               rotate: -360,
-              transition: { duration: 15, repeat: Infinity, ease: 'linear' }
+              transition: { duration: 15, repeat: Infinity, ease: "linear" },
             }}
           >
-            <Image
-              src="/window.svg"
-              alt="Window Icon"
-              fill
-              className="object-contain opacity-50"
-            />
+            <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 drop-shadow-[0_0_10px_rgba(99,102,241,0.8)] tracking-wide uppercase">
+              Remix.js
+            </h2>
           </motion.div>
         </motion.div>
       </div>

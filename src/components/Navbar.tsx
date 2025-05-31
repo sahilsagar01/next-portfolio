@@ -48,6 +48,7 @@ const Navbar = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               {[
                 // "About",
+                "Experience",
                "Projects", "Skills", "Contact"].map((item) => (
                 <motion.div
                   key={item}
@@ -119,6 +120,7 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {[
                 // "About",
+                "Experience",
              "Projects", "Skills", "Contact"].map((item) => (
               <motion.div
                 key={item}
