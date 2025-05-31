@@ -7,7 +7,7 @@ import emailjs from '@emailjs/browser';
 const ContactMe = () => {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-  const formRef = useRef();
+  const formRef = useRef('');
   const [formInput, setFormInput] = useState({
     name: '',
     email: '',
@@ -37,7 +37,7 @@ const ContactMe = () => {
     }
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     emailjs
       .sendForm('service_dmbhh5r', 'template_ws5iv1c', formRef.current, {
