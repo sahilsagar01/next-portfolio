@@ -20,7 +20,7 @@ const experiences = [
     ],
   },
   {
-    title: "Magicsell",
+    title: "Magicsell AI",
     role: "Associate Full Stack Developer",
     work: [
       "Built a Shopify theme extension from scratch using Remix.",
